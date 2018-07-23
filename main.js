@@ -1,24 +1,51 @@
-var cards = ["queen", "queen", "king1", "king2"];
+var cards = [
+{
+rank: 'queen',
+suit: 'heart',
+cardImage: 'images/queen-of-diamonds.png'
+},
+{
+rank: 'queen',
+suit: 'diamonds',
+cardImage: 'images/queen-of-heartss.png'
+},
+{
+rank: 'king',
+suit: 'heart',
+cardImage: 'images/king-of-diamonds.png'
+},
+{
+rank: 'king',
+suit: 'diamonds',
+cardImage: 'images/king-of-heartss.png'
+}
+];
+
 var cardsInPlay = [];
+
+function flipCard (cardId) {
 var cardOne = cards[cards.length - 4];
 var cardTwo = cards[cards.length - 3];
-var cardThree;
-var cardFour
-cardsInPlay.push(cardOne)
-cardsInPlay.push(cardTwo)
+cardsInPlay.push(cards[cardId].rank);
+cardsInPlay.push(cardTwo);
+console.log(cardOne + " " + cardTwo + "length" + cardsInPlay.length);
 
-console.log("Player picked" + " " + cardOne + " " + "and then" + " " + cardTwo);
-
-  if (cardsInPlay.length === 2) {
-    alert("Yinz picked two!");
-  } else {
-    alert("Ya Jagoff! Can't you cahhhnt?");
-  }
+if (cardsInPlay.length === 2) {
+ alert("Two cards picked");
+ console.log("User flipped" + cards[cardsId].rank);
+} else {
+console.log("Pick two cards");
+}
 
 
-  if (cardOne === cardTwo) {
-    alert("Ya gotta match! Rill Nice n'at!");
-  } else {
-    alert("No deal, Bucky. Try again.");
-  }
+if (cardsInPlay[0] === cardsInPlay[1]) {
+console.log("You found a match!");
+} else {
+console.log("Sorry, try again.");
+}
+}
 
+
+
+
+  
